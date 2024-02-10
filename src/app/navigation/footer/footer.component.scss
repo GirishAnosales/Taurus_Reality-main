@@ -1,0 +1,31 @@
+@import "../../theme/theme.scss";
+
+.mat-divider {
+    border-top: 1px solid $black700;
+}
+
+@media screen and (min-width: 0px) {
+    .home {
+        background-color: $black;
+        color: $dark-gray;
+        padding-top: 6rem;
+
+        .h5 {
+            color: $blue;
+        }
+
+        .r1 {
+            display: flex;
+            justify-content: center;
+            padding-bottom: 2rem;
+        }
+
+        .r2 {
+            .r2c1 {
+                display: flex;
+                justify-content: center;
+                padding: 2rem;
+            }
+        }
+    }
+}

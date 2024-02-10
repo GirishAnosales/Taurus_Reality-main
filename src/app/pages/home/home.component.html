@@ -1,0 +1,77 @@
+<div class="container-fluid home">
+    <div class="row r1">
+        <div class="col-lg-12 r1c1">
+            <div class="row r1c1r1">
+                <div class="col-lg-6 r1c1r1c1">
+                    <div class="tag-line">
+                        <h1 class="h1">The best way to find your properties</h1>
+                        <p class="p">Taurus realtors is the best choice for finding the right properties in India. We
+                            take the
+                            stress out of buying and help you find your dream properties</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 r1c1r1c2">
+                    <img src="../.././../assets/favicon_io/android-chrome-192x192.png" alt="Taurus Reality Logo"
+                        class="logo">
+
+                    <!-- <div class="button-wrap">
+                        <button class="mat-raised-button" (click)="openDialog()" mat-raised-button>
+                            <h1 class="h1">Get In Touch</h1>
+                        </button>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row r2">
+        <div class="col-lg-12 r2c1">
+            <h1 class="h1">REAL ESTATES</h1>
+            <p class="p">TAURUS REALTORS IS THE BEST CHOICE FOR FINDING THE RIGHT PROPERTIES IN INDIA. WE TAKE THE
+                STRESS OUT OF BUYING AND HELP YOU FIND YOUR DREAM PROPERTIES</p>
+            <mat-tab-group class="mat-tab-group" mat-stretch-tabs="false" mat-align-tabs="center">
+                <mat-tab class="mat-tab" label="Recent">
+                    <div class="wrapper">
+                        <mat-card class="mat-card" *ngFor="let data of latestProperties">
+                            <div class="img-wrapper">
+                                <img class="img" [src]="data.src" [alt]="data.name" class="img">
+                            </div>
+                            <div class="property-info">
+                                <h6 class="h6">{{data.name}}</h6>
+                            </div>
+                        </mat-card>
+                    </div>
+                </mat-tab>
+                <mat-tab class="mat-tab" label="Featured">
+                    <div class="wrapper">
+                        <mat-card class="mat-card" *ngFor="let data of featuredProperties">
+                            <div class="img-wrapper">
+                                <img class="img" [src]="data.src" [alt]="data.name" class="img">
+                            </div>
+                            <div class="property-info">
+                                <h6 class="h6">{{data.name}}</h6>
+                            </div>
+                        </mat-card>
+                    </div>
+                </mat-tab>
+            </mat-tab-group>
+        </div>
+    </div>
+
+    <div class="row r3">
+        <div class="col-lg-12 r3c1">
+            <h1 class="h1">TESTIMONIALS</h1>
+            <p class="p">INSIGHTS, TIPS & HOW-TO GUIDES ON SELLING PROPERTY AND PREPARING YOUR HOME OR INVESTMENT
+                PROPERTY FOR SALE</p>
+        </div>
+        <div class="col-lg-8 r3c2">
+            <app-testimonials></app-testimonials>
+        </div>
+    </div>
+
+    <!-- <div class="row r4">
+        <div class="col-lg-12 r4c1">
+        </div>
+    </div> -->
+
+</div>

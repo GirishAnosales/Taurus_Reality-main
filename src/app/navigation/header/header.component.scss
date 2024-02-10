@@ -1,0 +1,46 @@
+@import '../../theme/theme.scss';
+@import '../../theme/keyframes.scss';
+
+.active {
+    border-bottom: 3px solid $primary0;
+    // font-weight: bold;
+}
+
+.mat-menu {
+    .mat-menu-item {
+        font-size: small;
+    }
+}
+
+@media screen and (min-width:0px) {
+    .home {
+        .r1 {
+            .r1c1 {
+                display: flex;
+                justify-content: space-evenly;
+                align-content: center;
+                align-items: center;
+
+                .hire-a-resource {
+                    border: 2px solid $primary90;
+                }
+
+                .a {
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    color: $primary0;
+                    padding: 0.5rem;
+                    border-radius: 0;
+                    font-size: small;
+                    margin: 0 2rem;
+                }
+
+                .a:hover {
+                    border-bottom: 3px solid $primary0;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width:960px) {}

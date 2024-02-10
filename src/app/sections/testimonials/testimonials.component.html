@@ -1,0 +1,14 @@
+<mat-card class="mat-card">
+    <ngb-carousel class="ngb-carousel" [showNavigationIndicators]="false">
+        <ng-template class="ng-template" ngbSlide *ngFor="let data of testimonials">
+            <div class="carousel-wrapper">
+                <div class="pic">
+                    <mat-icon class="mat-icon">person</mat-icon>
+                </div>
+                <q class="q">{{data.testimony}}</q>
+                <h4 class="h4">{{data.name}}</h4>
+                <h6 class="h6">{{data.designation}}</h6>
+            </div>
+        </ng-template>
+    </ngb-carousel>
+</mat-card>

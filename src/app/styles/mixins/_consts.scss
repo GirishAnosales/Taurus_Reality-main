@@ -1,0 +1,132 @@
+/*
+    Single Values
+*/
+
+// DISPLAY
+@mixin d-flex {
+    display: flex;
+}
+
+// JUSTIFY CONTENT SINGLE VALUES
+@mixin jc-flex-start {
+    justify-content: flex-start;
+}
+
+@mixin jc-center {
+    justify-content: center;
+}
+
+@mixin jc-flex-end {
+    justify-content: flex-end;
+}
+
+@mixin jc-space-around {
+    justify-content: space-around;
+}
+
+@mixin jc-space-between {
+    justify-content: space-between;
+}
+
+@mixin jc-space-evenly {
+    justify-content: space-evenly;
+}
+
+// ALIGN ITEMS SINGLE VALUES
+@mixin ai-flex-start {
+    align-items: flex-start;
+}
+
+@mixin ai-center {
+    align-items: center;
+}
+
+@mixin ai-flex-end {
+    align-items: flex-end;
+}
+
+@mixin ai-space-around {
+    align-items: space-around;
+}
+
+@mixin ai-space-between {
+    align-items: space-between;
+}
+
+@mixin ai-space-evenly {
+    align-items: space-evenly;
+}
+
+// ALIGN CONTENT SINGLE VALUES
+@mixin ac-flex-start {
+    align-content: flex-start;
+}
+
+@mixin ac-center {
+    align-content: center;
+}
+
+@mixin ac-flex-end {
+    align-content: flex-end;
+}
+
+@mixin ac-space-around {
+    align-content: space-around;
+}
+
+@mixin ac-space-between {
+    align-content: space-between;
+}
+
+@mixin ac-space-evenly {
+    align-content: space-evenly;
+}
+
+// FLEX DIRECTION SINGLE VALUES
+
+@mixin fd-column {
+    flex-direction: column;
+}
+
+@mixin fd-column-reverse {
+    flex-direction: column-reverse;
+}
+
+@mixin fd-row {
+    flex-direction: row;
+}
+
+@mixin fd-row-reverse {
+    flex-direction: row-reverse;
+}
+
+// FLEX WRAP SINGLE VALUES
+@mixin fw-wrap {
+    flex-wrap: wrap;
+}
+
+@mixin fw-nowrap {
+    flex-wrap: nowrap;
+}
+
+@mixin fw-wrap-reverse {
+    flex-wrap: wrap-reverse;
+}
+
+// FLEX GROW SINGLE VALUES
+@mixin fg-auto {
+    flex-grow: auto;
+}
+
+@mixin fg-value($value) {
+    flex-grow: $value;
+}
+
+// FLEX SHRINK SINGLE VALUES
+@mixin fs-auto {
+    flex-shrink: auto;
+}
+
+@mixin fs-value($value) {
+    flex-shrink: $value;
+}

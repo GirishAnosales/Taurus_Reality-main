@@ -1,0 +1,119 @@
+<div class="container-fluid home">
+    <div class="row r1">
+        <div class="col-sm-12 r1c1">
+            <mat-toolbar class="mat-toolbar" *ngIf="isSmall | async">
+                <a href="home" class="a">
+                    <img src="../.././../assets/favicon_io/favicon-32x32.png" alt="Taurus Reality Logo" class="logo">
+                </a>
+                <button type="mat-icon-button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
+                    <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+                </button>
+            </mat-toolbar>
+
+            <mat-toolbar class="mat-toolbar" *ngIf="!(isSmall | async)">
+                <a href="home" class="a">
+                    <img src="../.././../assets/favicon_io/favicon-32x32.png" alt="Taurus Reality Logo" class="logo">
+                </a>
+                <app-header></app-header>
+            </mat-toolbar>
+
+            <mat-sidenav-container class="mat-sidenav-container">
+                <mat-sidenav #drawer class="mat-sidenav" fixedInViewport
+                    [attr.role]="(isSmall | async) ? 'dialog' : 'navigation'" mode="over">
+                    <mat-nav-list class="mat-nav-list">
+                        <div class="close-button">
+                            <button class="mat-icon-button" type="button" aria-label="Toggle sidenav" mat-icon-button
+                                (click)="drawer.close()">
+                                <mat-icon class="mat-icon" aria-label="Side nav toggle icon">close</mat-icon>
+                            </button>
+                        </div>
+
+                        <!-- PAGES -->
+                        <div class="label">
+                            <h6 class="h6">Pages</h6>
+                        </div>
+                        <a class="a" mat-list-item (click)="drawer.close()" href="home">
+                            <h6 class="h6">Home</h6>
+                        </a>
+                        <mat-divider class="mat-divider"></mat-divider>
+                        <a class="a" mat-list-item (click)="drawer.close()" href="about">
+                            <h6 class="h6">About</h6>
+                        </a>
+                        <mat-divider class="mat-divider"></mat-divider>
+                        <a class="a" mat-list-item (click)="drawer.close()" href="contact">
+                            <h6 class="h6">Contact</h6>
+                        </a>
+                        <mat-divider class="mat-divider"></mat-divider>
+
+                        <!-- SERVICES -->
+                        <div class="label">
+                            <h6 class="h6">What We Provide</h6>
+                        </div>
+
+                        <!-- SERVICES ACCORDION -->
+                        <mat-accordion class="mat-accordion">
+                            <mat-expansion-panel class="mat-expansion-panel" hideToggle>
+                                <mat-expansion-panel-header class="mat-expansion-panel-header">
+                                    <mat-panel-title class="mat-panel-title"> Services </mat-panel-title>
+                                </mat-expansion-panel-header>
+                                <mat-action-row class="mat-action-row">
+                                    <a class="a" mat-list-item (click)="drawer.close()" href="services/real-estate">
+                                        <h6 class="h6">Real Estate</h6>
+                                    </a>
+                                </mat-action-row>
+                                <mat-action-row class="mat-action-row">
+                                    <a class="a" mat-list-item (click)="drawer.close()"
+                                        href="services/home-loan-consultation">
+                                        <h6 class="h6">Home Loan Consultation</h6>
+                                    </a>
+                                </mat-action-row>
+                                <mat-action-row class="mat-action-row">
+                                    <a class="a" mat-list-item (click)="drawer.close()" href="services/nri">
+                                        <h6 class="h6">NRI</h6>
+                                    </a>
+                                </mat-action-row>
+                            </mat-expansion-panel>
+                        </mat-accordion>
+
+                        <!-- PROJECTS ACCORDION -->
+                        <mat-accordion class="mat-accordion">
+                            <mat-expansion-panel class="mat-expansion-panel" hideToggle>
+                                <mat-expansion-panel-header class="mat-expansion-panel-header">
+                                    <mat-panel-title class="mat-panel-title"> Projects </mat-panel-title>
+                                </mat-expansion-panel-header>
+                                <mat-action-row class="mat-action-row">
+                                    <a class="a" mat-list-item (click)="drawer.close()" href="projects/residential">
+                                        <h6 class="h6">Residential</h6>
+                                    </a>
+                                </mat-action-row>
+                                <mat-action-row class="mat-action-row">
+                                    <a class="a" mat-list-item (click)="drawer.close()" href="projects/commercial">
+                                        <h6 class="h6">Commercial</h6>
+                                    </a>
+                                </mat-action-row>
+                                <mat-action-row class="mat-action-row">
+                                    <a class="a" mat-list-item (click)="drawer.close()" href="projects/villas">
+                                        <h6 class="h6">Villas & Rowhouses</h6>
+                                    </a>
+                                </mat-action-row>
+                                <mat-action-row class="mat-action-row">
+                                    <a class="a" mat-list-item (click)="drawer.close()" href="projects/plots">
+                                        <h6 class="h6">Farmhouse Plots</h6>
+                                    </a>
+                                </mat-action-row>
+                            </mat-expansion-panel>
+                        </mat-accordion>
+                    </mat-nav-list>
+                </mat-sidenav>
+
+                <!-- MAT SIDE NAV CONTENT -->
+
+                <mat-sidenav-content class="mat-sidenav-content">
+                    <router-outlet></router-outlet>
+                </mat-sidenav-content>
+            </mat-sidenav-container>
+
+            <app-footer></app-footer>
+        </div>
+    </div>
+</div>

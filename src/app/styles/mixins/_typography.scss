@@ -1,0 +1,15 @@
+$font-sizes: (
+    0px: 1rem,
+    320px: 1.5rem,
+    768px: 2rem,
+    1024px: 2.5rem,
+    1440px: 3rem
+);
+
+@mixin responsive-font-size {
+    @each $breakpoint, $font-size in $font-sizes {
+        @media screen and (min-width: $breakpoint) {
+            font-size: $font-size;
+        }
+    }
+}

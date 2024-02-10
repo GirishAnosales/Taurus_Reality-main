@@ -1,0 +1,54 @@
+@import "../../../theme/theme.scss";
+@import '../../../styles/mixins/images';
+
+// IMAGE URLS
+$url1: '../../../../assets/images/services/home-loan-consultation/home-loan-consultation.jpg';
+
+@media screen and (min-width: 0px) {
+    .home {
+        padding-bottom: 3rem;
+
+        .r1 {
+            @include parallax($url1);
+            display: flex;
+            justify-content: center;
+            filter: contrast(1.3);
+            padding: 6rem 0;
+            margin: 1rem 0;
+            border-radius: 1rem;
+            color: $white;
+        }
+
+        .mat-divider {
+            margin: 4rem auto;
+            width: 256px;
+            border-top: 1px solid $black;
+        }
+
+        .r2 {
+            display: flex;
+            justify-content: center;
+            margin: auto;
+            height: 60vh;
+
+            .r2c1 {
+                padding-top: 0;
+
+                .img{
+                    height: 300px;
+                }
+
+                .h6 {
+                    font-style: italic;
+                }
+
+                .mat-raised-button{
+                    padding: 2rem;
+                    margin-top: 2rem;
+                    background-color: $yellow;
+                    font-family: Noto Sans;
+                }
+            }
+        }
+    }
+}

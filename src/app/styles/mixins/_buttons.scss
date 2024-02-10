@@ -1,0 +1,21 @@
+@import './border';
+@import './responsive';
+
+@mixin mat-mini-fab-up {
+    position: fixed;
+    bottom: 4rem;
+    right: 1rem;
+    z-index: 99;
+}
+
+@mixin mat-mini-fab-down {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 9999;
+}
+
+@mixin responsive-button{
+    @include border-radius-all(0px);
+    padding: 1rem;
+}

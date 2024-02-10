@@ -1,0 +1,38 @@
+<div class="container-fluid home">
+    <div class="row r1">
+        <div class="col-sm-12 r1c1">
+            <a class="a mat-button" mat-button (click)="scrollToTop()" routerLinkActive="active"
+                routerLink="home">Home</a>
+            <a class="a mat-button" [matMenuTriggerFor]="services" mat-button>Services</a>
+            <a class="a mat-button" [matMenuTriggerFor]="projects" mat-button>Projects</a>
+            <a class="a mat-button" mat-button (click)="scrollToTop()" routerLinkActive="active"
+                routerLink="about">About</a>
+            <a class="a mat-button" mat-button (click)="scrollToTop()" routerLinkActive="active"
+                routerLink="contact">Contact</a>
+        </div>
+    </div>
+</div>
+
+<!-- Services Menu -->
+<mat-menu class="mat-menu" #services="matMenu">
+    <button class="mat-menu-item" style="font-size: small" routerLink="services/real-estate" (click)="scrollToTop()"
+        mat-menu-item>Real
+        Estate</button>
+    <button class="mat-menu-item" style="font-size: small" routerLink="services/home-loan-consultation"
+        (click)="scrollToTop()" mat-menu-item>Home Loan
+        Consultation</button>
+    <button class="mat-menu-item" style="font-size: small" routerLink="services/nri" (click)="scrollToTop()"
+        mat-menu-item>NRI</button>
+</mat-menu>
+
+<!-- Projects Menu -->
+<mat-menu class="mat-menu" #projects="matMenu">
+    <button class="mat-menu-item" style="font-size: small" routerLink="projects/residential" (click)="scrollToTop()"
+        mat-menu-item>Residential</button>
+        <button class="mat-menu-item" style="font-size: small" routerLink="projects/commercial" (click)="scrollToTop()"
+        mat-menu-item>Commercial</button>
+        <button class="mat-menu-item" style="font-size: small" routerLink="projects/villas" (click)="scrollToTop()"
+        mat-menu-item>Villas & Rowhouses</button>
+        <button class="mat-menu-item" style="font-size: small" routerLink="projects/plots" (click)="scrollToTop()"
+        mat-menu-item>Farmhouse Plots</button>
+</mat-menu>

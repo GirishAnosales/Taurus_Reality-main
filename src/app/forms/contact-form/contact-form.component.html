@@ -1,0 +1,71 @@
+<mat-dialog-content class="mat-dialog-content">
+    <div class="container-fluid home">
+        <div class="row r1">
+            <div class="col-lg-12 r1c1">
+                <form class="form" [formGroup]="form">
+
+                    <!-- HEADER -->
+                    <!-- <mat-card-header class="mat-card-header">
+                        <mat-card-title class="mat-card-title">
+                            <h3 class="h3">Contact</h3>
+                        </mat-card-title>
+                    </mat-card-header> -->
+
+                    <!-- MAT CARD CONTENT -->
+                    <mat-card-content class="mat-card-content">
+
+                        <!-- YOUR NAME -->
+                        <mat-form-field class="mat-form-field" appearance="fill">
+                            <mat-label class="mat-label">Full Name</mat-label>
+                            <input name="Full Name" type="text" class="input" formControlName="fullName" matInput>
+                            <mat-error *ngIf="form.get('fullName')?.hasError('required')">
+                                Name is <strong>required</strong>
+                            </mat-error>
+                        </mat-form-field>
+
+                        <!-- YOUR EMAIL -->
+                        <mat-form-field class="mat-form-field">
+                            <mat-label>Email</mat-label>
+                            <input type="email" matInput formControlName="email" placeholder="Ex. pat@example.com">
+                            <mat-error
+                                *ngIf="form.get('email')?.hasError('email') && !form.get('email')?.hasError('required')">
+                                Please enter a valid email address
+                            </mat-error>
+                            <mat-error *ngIf="form.get('email')?.hasError('required')">
+                                Email is <strong>required</strong>
+                            </mat-error>
+                        </mat-form-field>
+
+                        <!-- YOUR NUMBER -->
+                        <mat-form-field class="mat-form-field" style="font-size: small; width: 100%;" appearance="fill">
+                            <mat-label class="mat-label" style="font-size: small;">Phone</mat-label>
+                            <input name="Phone" type="tel" class="input" formControlName="phone" matInput>
+                            <mat-error *ngIf="form.get('phone')?.hasError('required')">
+                                Phone Number is <strong>required</strong>
+                            </mat-error>
+                        </mat-form-field>
+
+                        <!-- YOUR MESSAGE -->
+                        <mat-form-field class="mat-form-field" appearance="fill">
+                            <mat-label class="mat-label">Message</mat-label>
+                            <textarea name="Message" type="text" class="input" formControlName="message"
+                                matInput></textarea>
+                        </mat-form-field>
+
+                    </mat-card-content>
+
+                    <!-- FOOTER -->
+                    <!-- <mat-card-footer class="mat-card-footer">
+                        <h6 class="h6">By submitting this form, you agree to the privacy policy & terms and conditions.
+                        </h6>
+                    </mat-card-footer> -->
+
+                    <!-- ACTIONS -->
+                    <mat-card-actions class="mat-card-actions">
+                        <button class="mat-button" mat-raised-button (click)="onSubmit()">SUBMIT</button>
+                    </mat-card-actions>
+                </form>
+            </div>
+        </div>
+    </div>
+</mat-dialog-content>

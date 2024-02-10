@@ -1,0 +1,242 @@
+@import '../../theme/theme.scss';
+@import '../../theme/keyframes.scss';
+@import '../../styles/mixins/size';
+@import '../../styles/mixins/images';
+@import '../../styles/mixins/display';
+@import '../../styles/mixins/responsive';
+@import '../../styles/mixins/buttons';
+
+// IMAGE URLS
+$url1: '../../../assets/images/home/background/landscape1.jpg';
+$url2: '../../../assets/images/home/testimonials/testimonials1.jpg';
+
+@media screen and (min-width:0px) {
+    .home {
+        .r1 {
+            @include min-height-100;
+
+            .r1c1 {
+                @include parallax($url1);
+
+                .r1c1r1 {
+                    height: 100%;
+                    @include center-center;
+
+                    .r1c1r1c1 {
+                        @include center-center;
+
+                        .tag-line {
+                            background-color: #00000080;
+                            padding: 1rem;
+                            max-width: 512px;
+
+                            .h1 {
+                                font-size: 3rem;
+                                color: $white;
+                                font-weight: bold;
+                            }
+
+                            .p {
+                                color: $white;
+                            }
+                        }
+                    }
+
+                    .r1c1r1c2 {
+                        @include center-center;
+
+                        .logo {
+                            background-color: #ffffff;
+                            padding: 2rem;
+                        }
+
+                        .button-wrap {
+                            .mat-raised-button {
+                                @include responsive-button;
+                                @include height-width-100-percent;
+
+                                .h1 {
+                                    @include responsive-text;
+                                    text-transform: uppercase;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .r2 {
+            @include min-height-100;
+
+            .r2c1 {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 1rem;
+
+                .h1 {
+                    padding-top: 4rem !important;
+                }
+
+                .p {
+                    padding-bottom: 4rem !important;
+                }
+
+                .mat-tab-group {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .wrapper {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-wrap: wrap;
+                        padding: 2rem 0;
+                        width: 100%;
+
+                        .mat-card {
+                            margin: 1rem;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            border-radius: 0;
+                            box-shadow: 2px 2px 8px 1px #00000020;
+                            overflow: hidden;
+                            border-radius: 1rem;
+                            height: 256px;
+                            width: 384px;
+
+                            .img-wrapper {
+                                overflow: hidden;
+                                width: 100%;
+                                height: 100%;
+
+                                .img {
+                                    width: 100%;
+                                    height: 200px;
+                                    filter: brightness(1);
+                                    transition: 0.7s;
+                                }
+                            }
+
+                            .button-group {
+                                display: none;
+                                position: absolute;
+                                top: 5.5rem;
+
+                                .mat-stroked-button {
+                                    background-color: inherit;
+                                    border: 2px solid $white;
+                                    color: $white;
+                                    border-radius: 0;
+                                    transition: 0.7s;
+                                }
+                            }
+
+                            .property-info {
+                                color: $black;
+                            }
+                        }
+
+                        .mat-card:hover {
+                            .img-wrapper {
+                                .img {
+                                    transition: 0.7s;
+                                    transform: scale(1.2);
+                                    filter: brightness(0.50);
+                                }
+                            }
+
+                            .button-group {
+                                display: inline;
+
+                                .mat-stroked-button {
+                                    transition: 0.7s;
+                                    color: $white;
+                                }
+
+                                .mat-stroked-button:hover {
+                                    transition: 0.7s;
+                                    color: $yellow;
+                                    border: 2px solid $yellow;
+                                }
+                            }
+                        }
+
+
+                    }
+                }
+            }
+        }
+
+        .r3 {
+            @include parallax($url2);
+            display: flex;
+            justify-content: center;
+
+            .r3c1 {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                color: $white;
+                padding: 1rem;
+                background-color: #00000080;
+                backdrop-filter: blur(40px);
+            }
+        }
+    }
+}
+
+@media screen and (min-width:960px) {
+    .home {
+        .r1 {
+            .r1c1 {
+                top: 8rem;
+
+                .tag-line {
+                    .h1 {
+                        font-size: 5rem;
+                    }
+
+                    .p {
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width:1440px) {
+    .home {
+        .r1 {
+            .r1c1 {
+                top: 10rem;
+                padding-left: 10rem;
+                justify-content: flex-start;
+                align-items: flex-start;
+
+                .r1c1r1 {
+                    .r1c1r1c1 {
+                        .tag-line {
+                            max-width: 640px;
+
+                            .h1 {
+                                font-size: 5rem;
+                            }
+
+                            .p {
+                                font-size: 1.2rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

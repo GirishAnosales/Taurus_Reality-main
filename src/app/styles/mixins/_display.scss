@@ -1,0 +1,175 @@
+@import './consts';
+
+// LEFT
+@mixin top-left {
+    @include d-flex;
+    @include jc-flex-start;
+    @include ai-flex-start;
+}
+
+@mixin center-left {
+    @include d-flex;
+    @include jc-flex-start;
+    @include ai-center;
+}
+
+@mixin bottom-left {
+    @include d-flex;
+    @include jc-flex-start;
+    @include ai-flex-end;
+}
+
+// RIGHT
+@mixin top-right {
+    @include d-flex;
+    @include jc-flex-end;
+    @include ai-flex-start;
+}
+
+@mixin center-right {
+    @include d-flex;
+    @include jc-flex-end;
+    @include ai-center;
+}
+
+@mixin bottom-right {
+    @include d-flex;
+    @include jc-flex-end;
+    @include ai-flex-end;
+}
+
+@mixin top-right-col {
+    @include d-flex;
+    @include fd-column;
+    @include jc-flex-end;
+    @include ai-flex-start;
+}
+
+@mixin center-right-col {
+    @include d-flex;
+    @include fd-column;
+    @include jc-flex-end;
+    @include ai-center;
+}
+
+@mixin bottom-right-col {
+    @include d-flex;
+    @include fd-column;
+    @include jc-flex-end;
+    @include ai-flex-end;
+}
+
+// CENTER
+@mixin col-top {
+    @include d-flex;
+    @include fd-column;
+    @include jc-center;
+}
+
+@mixin col-center {
+    @include d-flex;
+    @include fd-column;
+    @include jc-center;
+}
+
+@mixin col-bottom {
+    @include d-flex;
+    @include fd-column;
+    @include jc-center;
+}
+
+@mixin center-top {
+    @include d-flex;
+    @include jc-center;
+    @include ai-flex-start;
+}
+
+@mixin center-center {
+    @include d-flex;
+    @include jc-center;
+    @include ai-center;
+}
+
+@mixin center-bottom {
+    @include d-flex;
+    @include jc-center;
+    @include ai-flex-end;
+}
+
+@mixin center-top-col {
+    @include d-flex;
+    @include fd-column;
+    @include jc-center;
+    @include ai-flex-start;
+}
+
+@mixin center-center-col {
+    @include d-flex;
+    @include fd-column;
+    @include jc-center;
+    @include ai-center;
+}
+
+@mixin center-bottom-col {
+    @include d-flex;
+    @include fd-column;
+    @include jc-center;
+    @include ai-flex-end;
+}
+
+// SPACE AROUND
+@mixin space-around-top {
+    @include d-flex;
+    @include jc-space-around;
+    @include ai-flex-start;
+}
+
+@mixin space-around-center {
+    @include d-flex;
+    @include jc-space-around;
+    @include ai-center;
+}
+
+@mixin space-around-bottom {
+    @include d-flex;
+    @include jc-space-around;
+    @include ai-flex-end;
+}
+
+// SPACE BETWEEN
+@mixin space-between-top {
+    @include d-flex;
+    @include jc-space-between;
+    @include ai-flex-start;
+}
+
+@mixin space-between-center {
+    @include d-flex;
+    @include jc-space-between;
+    @include ai-center;
+}
+
+@mixin space-between-bottom {
+    @include d-flex;
+    @include jc-space-between;
+    @include ai-flex-end;
+}
+
+// SPACE EVENLY
+@mixin space-evenly-top {
+    @include d-flex;
+    @include jc-space-evenly;
+    @include ai-flex-start;
+}
+
+@mixin space-evenly-center {
+    @include d-flex;
+    @include jc-space-evenly;
+    @include ai-center;
+}
+
+@mixin space-evenly-bottom {
+    @include d-flex;
+    @include jc-space-evenly;
+    @include ai-flex-end;
+}

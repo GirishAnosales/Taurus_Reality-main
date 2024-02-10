@@ -1,0 +1,61 @@
+// BORDER RADIUS
+@mixin border-radius-all($radius) {
+    border-radius: $radius;
+}
+
+@mixin rounded-top-right($radius) {
+    border-top-right-radius: $radius;
+}
+
+@mixin rounded-top-left($radius) {
+    border-top-left-radius: $radius;
+}
+
+@mixin rounded-bottom-right($radius) {
+    border-bottom-right-radius: $radius;
+}
+
+@mixin rounded-bottom-left($radius) {
+    border-bottom-left-radius: $radius;
+}
+
+@mixin rounded-top($radius) {
+    border-top-right-radius: $radius;
+    border-top-left-radius: $radius;
+}
+
+@mixin rounded-bottom($radius) {
+    border-bottom-right-radius: $radius;
+    border-bottom-left-radius: $radius;
+}
+
+@mixin rounded-left($radius) {
+    border-top-left-radius: $radius;
+    border-bottom-left-radius: $radius;
+}
+
+@mixin rounded-right($radius) {
+    border-top-right-radius: $radius;
+    border-bottom-right-radius: $radius;
+}
+
+// BORDER
+@mixin border-all($size, $color){
+    border: $size solid $color;
+}
+
+@mixin border-top($size, $color){
+    border-top: $size solid $color;
+}
+
+@mixin border-bottom($size, $color){
+    border-bottom: $size solid $color;
+}
+
+@mixin border-left($size, $color){
+    border-left: $size solid $color;
+}
+
+@mixin border-right($size, $color){
+    border-right: $size solid $color;
+}

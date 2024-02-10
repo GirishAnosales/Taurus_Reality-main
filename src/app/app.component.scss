@@ -1,0 +1,23 @@
+@import '../app/styles/mixins/buttons';
+@import '../app/styles/mixins/size';
+
+.app {
+    @include height-width-100-percent;
+    min-height: 100vh;
+
+    .r1 {
+        padding: 0%;
+
+        .r1c1 {
+            padding: 0%;
+        }
+    }
+}
+
+.mat-mini-fab-up {
+    @include mat-mini-fab-up;
+}
+
+.mat-mini-fab-down {
+    @include mat-mini-fab-down;
+}
